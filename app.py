@@ -93,8 +93,6 @@ def register():
 
         return '<h1 id = "success">New user has been created! Success !</h1>'
         #return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
-    else:
-        return '<h1 id = "success"> Failure !</h1>'
 
     return render_template('register.html', form=form)
 
