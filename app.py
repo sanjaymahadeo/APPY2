@@ -92,10 +92,10 @@ def register():
             db.session.add(new_user)
             db.session.commit()
         #if form.phonenumber.data: 
-            return '<h1 id = "success">New user has been created! Success !</h1>'
+            return '<h1 id='success'>New user has been created! Success !</h1>'
         #return '<h1 id = "success"> Failure !</h1>'
         #return '<h1>' + form.username.data + ' ' + form.email.data + ' ' + form.password.data + '</h1>'
-        return '<h1 id = "success"> Failure !</h1>'
+        return '<h1 id = 'success'> Failure !</h1>'
 
     return render_template('register.html', form=form)
 
