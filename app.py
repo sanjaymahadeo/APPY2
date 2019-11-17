@@ -22,7 +22,7 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(15), unique=True)
     email = db.Column(db.String(50), unique=True)
     password = db.Column(db.String(80))
-    phonenumber = db.Column(db.String(11), unique=True)
+    phonenumber = db.Column(db.String(11))
 
 @login_manager.user_loader
 def load_user(user_id):
