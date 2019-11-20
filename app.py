@@ -37,12 +37,16 @@ class RegisterForm(FlaskForm):
     username = StringField('username', validators=[InputRequired(), Length(min=4, max=15)], id = "uname")
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)], id = "pword")
     phonenumber = StringField('phonenumber', validators=[InputRequired(), Length(min=10, max=11)], id = "2fa")
+    
+class SpellCheckFrom(FlaskForm):
+    inputtext = StringField('inputtext', validators=[InputRequired(), id = "inputtext")
 
 
 @app.route('/spell_check')
 @login_required
 def spell_check():
-    return render_template('spell_check.html', name=current_user.username)
+    form = SpellCheckForm()
+    return render_template('spell_check.html', name=current_user.username, form=form)
 
 @app.route('/spell_check', methods=['POST'])
 @login_required
