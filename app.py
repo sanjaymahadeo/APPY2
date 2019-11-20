@@ -86,7 +86,7 @@ def register():
     if form.validate_on_submit():
         #if len(form.password.data) > 7:
         hashed_password = generate_password_hash(form.password.data, method='sha256')
-        new_user = User(username=form.username.data, email=form.email.data, password=hashed_password, phonenumber=form.phonenumber.data)
+        new_user = User(username=form.username.data, password=hashed_password, phonenumber=form.phonenumber.data)
         db.session.add(new_user)
         db.session.commit()
         #if form.phonenumber.data: 
