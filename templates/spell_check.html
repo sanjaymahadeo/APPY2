@@ -32,7 +32,8 @@ Demo App
         <h1 id="result">------------ success. --------------</h1>
         <h2>Submit Here</h2>
         <form method="POST">
-          <input name="text" id="inputtext">
+          {{ form.hidden_tag() }}
+          {{ form.inputtext }}
           <input type="submit">
         </form>
       </div>
