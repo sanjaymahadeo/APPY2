@@ -38,7 +38,7 @@ class RegisterForm(FlaskForm):
     password = PasswordField('password', validators=[InputRequired(), Length(min=8, max=80)], id = "pword")
     phonenumber = StringField('phonenumber', validators=[InputRequired(), Length(min=10, max=11)], id = "2fa")
     
-class SpellCheckFrom(FlaskForm):
+class SpellCheckForm(FlaskForm):
     inputtext = StringField('inputtext', validators=[InputRequired()], id = "inputtext")
 
 
