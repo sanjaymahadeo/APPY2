@@ -39,7 +39,7 @@ class RegisterForm(FlaskForm):
     phonenumber = StringField('phonenumber', validators=[InputRequired(), Length(min=10, max=11)], id = "2fa")
     
 class SpellCheckFrom(FlaskForm):
-    inputtext = StringField('inputtext', validators=[InputRequired(), id = "inputtext")]
+    inputtext = StringField('inputtext', validators=[InputRequired()], id = "inputtext")
 
 
 @app.route('/spell_check')
